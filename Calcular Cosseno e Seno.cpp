@@ -1,4 +1,4 @@
-// Trabalho de Técnicas de Programção e Laboratório de Técnicas de Programação.
+// Trabalho de Técnicas de Programação e Laboratório de Técnicas de Programação.
 // Alunos: Pamela Magalhães de Queiroz e Rafael Henrique Geres.
 #include <iostream>
 #include <cmath>
