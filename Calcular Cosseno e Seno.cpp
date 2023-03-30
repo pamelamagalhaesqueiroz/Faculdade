@@ -3,7 +3,7 @@
 #include <iostream>
 #include <cmath>
 using namespace std;
-// 00 - Pedir para o usuário um angulo.
+    // 00 - Pedir para o usuário um angulo.
 int main(){
     double anguloGraus, anguloRadiano, cosseno3Termos, seno3Termos, cosseno40Termos, seno40Termos, theta;
     cout << "Digite um angulo em graus:  ";
