@@ -2,6 +2,7 @@
 //Pamela Magalhães - 2156959
 //Thomas Mantovani - 2185354
 
+// muda esse arquivo e separa em 2, mochila e cinto.
 #include "Inventario.h"
 #include "Elemento.h"
 #include <iostream>
@@ -50,7 +51,7 @@ bool Inventario::adicionarAoCinto(Elemento* elemento) {
 bool Inventario::removerDoCinto(int indice) {
     if (indice >= 0 && indice < 4 && cinto[indice] != nullptr) {
         pesoAtualCinto -= cinto[indice]->getPeso();
-        delete cinto[indice];
+        delete cinto[indice]; //cinto[indice] == nullptr // tira o delete, ta errado. deixa so essa linha ai
         cinto[indice] = nullptr;
         return true;
     }
@@ -67,7 +68,7 @@ Elemento* Inventario::acessarCinto(int indice) const {
 }
 
 bool Inventario::adicionarNaMochila(Elemento* elemento) {
-    if (topoMochila < 99) {
+    if (topoMochila < 99) { // a mochila n tem limite de items, tira isso aq
         mochila[++topoMochila] = elemento;
         return true;
     }
@@ -78,7 +79,7 @@ bool Inventario::adicionarNaMochila(Elemento* elemento) {
 
 Elemento* Inventario::removerDaMochila() {
     if (topoMochila >= 0) {
-        return mochila[topoMochila--];
+        return mochila[topoMochila--]; // ta faltando remover o item da mochila, vc ta so decrementando o topo
     }
 
     cout << "A mochila está vazia!\n";
